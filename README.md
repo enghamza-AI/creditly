@@ -33,9 +33,11 @@
 
 ## Why This Project Exists
 
-Most beginner ML tutorials hand you a single clean CSV and a `.fit()` call. Real-world ML almost never looks like that. This project is deliberately harder in a specific way: **two independent, messy, real datasets that must be reconciled before any modeling can happen** — which is closer to what ML work actually looks like in industry.
+Most tutorials hand us a single clean CSV and a `.fit()` call. Real-world ML almost never looks like that. This project is deliberately harder in a specific way: **two independent, messy, real datasets that must be reconciled before any modeling can happen** — which is closer to what ML work actually looks like in industry.
 
 The goal isn't just "get a model that predicts default." The goal is to build the *judgment* to reason about data quality, missingness, and leakage — the stuff that separates someone who calls `.fillna(0)` reflexively from someone who understands why the data is missing in the first place.
+
+And I am not here to be called as someone who calls fillna without any reasoning at all - 
 
 ## The Problem, in Plain English
 
@@ -44,7 +46,7 @@ A lender wants to estimate, **before approving a loan**, how likely a borrower i
 Census ACS data adds that context: median household income, income distribution, and other socioeconomic indicators, aggregated by ZIP-adjacent geography. Joining the two lets a model ask questions like: *does a borrower's income relative to their local area matter more than their income in isolation?*
 
 **Success for this project** is not "high accuracy." It's:
-1. A merge that is *honest* about its limitations (masked ZIP data — see [Design Decisions](#design-decisions--notes)).
+1. A merge that is *honest* about its limitations 
 2. A missing-data strategy that's justified by reasoning, not convenience.
 3. A logistic regression built from raw NumPy that you can explain end-to-end — normal equation, gradient descent, and why log-loss (not MSE) is the right objective.
 4. Code organized as functions/modules with tests, not a 300-cell notebook.
@@ -58,7 +60,7 @@ Census ACS data adds that context: median household income, income distribution,
 
 See [Dataset Download Instructions](#setup) below for exact steps.
 
-## What This Project Teaches
+## What I learned from this project
 
 - **Missing data reasoning**: MCAR / MAR / MNAR — diagnosing *why* data is missing before deciding *how* to handle it.
 - **Data joining under real-world constraints**: reconciling two datasets with no shared clean key, including privacy-masked geography.
@@ -71,7 +73,7 @@ See [Dataset Download Instructions](#setup) below for exact steps.
 
 | Day | Focus |
 |---|---|
-| **Day 1** (today) | Load both datasets, profile them, understand missingness, build a working (if imperfect) merge |
+| **Day 1** | Load both datasets, profile them, understand missingness, build a working (if imperfect) merge |
 | **Day 2** | Resolve missing data (MCAR/MAR/MNAR-informed), encode categoricals correctly (post-split), feature engineering |
 | **Day 3** | Linear regression from scratch (normal equation + gradient descent) as a warm-up, then logistic regression from scratch (gradient descent + log-loss), evaluation |
 
