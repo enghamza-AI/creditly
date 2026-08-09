@@ -5,7 +5,6 @@
   <img src="https://img.shields.io/badge/NumPy-from--scratch-013243?style=flat&logo=numpy&logoColor=white" alt="NumPy">
   <img src="https://img.shields.io/badge/pandas-data%20wrangling-150458?style=flat&logo=pandas&logoColor=white" alt="pandas">
   <img src="https://img.shields.io/badge/pytest-tested-0A9EDC?style=flat&logo=pytest&logoColor=white" alt="pytest">
-  <img src="https://img.shields.io/badge/status-Day%201%2F3-yellow?style=flat" alt="Status">
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat" alt="License">
 </p>
 
