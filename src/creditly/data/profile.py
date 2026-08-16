@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def profile_dataframe(df: pd.DataFrame, name: str = "dataframe") -> pd.DataFrame:
     print(f"---profiling: {name} ---")
     print(f"shape: {df.shape[0]:,} rows x {df.shape[1]} columns\n")
