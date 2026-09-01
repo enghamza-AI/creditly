@@ -1,6 +1,7 @@
 # Merging both datasets by aggregate_census_to_zip3
 import pandas as pd
- 
+
+
 def extract_zip3(zip_series: pd.Series) -> pd.Series:
     return (
         zip_series
